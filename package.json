@@ -1,0 +1,10 @@
+{
+  "name": "secret-santa-email",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx vercel dev"
+  },
+  "dependencies": {}
+}

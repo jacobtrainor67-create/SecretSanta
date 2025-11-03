@@ -1,0 +1,23 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0b1020;color:#e6e9f5}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:32px;margin:0 0 8px}h2{margin:0 0 12px}
+.subtitle{opacity:.8;margin:0 0 16px}
+.card{background:#111635;border:1px solid #1c2250;border-radius:16px;padding:16px;margin:16px 0;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.row{display:flex;flex-direction:column;gap:8px;margin:8px 0}
+.row.inline{flex-direction:row;align-items:center;gap:12px}
+label{font-weight:600}
+input,textarea,select{background:#0b1020;border:1px solid #2a336e;color:#e6e9f5;border-radius:10px;padding:10px;outline:none;max-width:100%}
+input:focus,textarea:focus,select:focus{border-color:#7480ff;box-shadow:0 0 0 3px rgba(116,128,255,.2)}
+.table-actions{display:flex;gap:8px;margin-bottom:8px}
+button{border:1px solid #2a336e;background:#131a42;color:#e6e9f5;border-radius:12px;padding:10px 14px;cursor:pointer}
+button.primary{background:#5b66ff;border-color:#5b66ff;color:white;font-weight:700}
+button.secondary{background:#121735}
+button:disabled{opacity:.5;cursor:not-allowed}
+table{width:100%;border-collapse:collapse;background:#0b1020;border:1px solid #2a336e;border-radius:10px;overflow:hidden}
+th,td{padding:10px;border-bottom:1px solid #1e2658;vertical-align:top}
+th{text-align:left;background:#0f1530}
+tr:last-child td{border-bottom:none}
+td .danger{background:#2a1430;border-color:#6b1e43}
+.preview{padding:12px;background:#0a0f27;border:1px dashed #2a336e;border-radius:12px;min-height:48px;white-space:pre-wrap}
+.status{margin-top:8px;min-height:24px}
+footer{opacity:.6;text-align:center;margin-top:24px}

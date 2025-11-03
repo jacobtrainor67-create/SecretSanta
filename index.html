@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secret Santa Email</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎁 Secret Santa Email</h1>
+    <p class="subtitle">Add participants, set locks & exclusions, draw pairs, and email the matches via Resend.</p>
+
+    <section class="card">
+      <h2>Event Details</h2>
+      <div class="row">
+        <label for="eventName">Event name</label>
+        <input id="eventName" placeholder="e.g., Office Secret Santa 2025" />
+      </div>
+      <div class="row">
+        <label for="organizerName">Organizer name</label>
+        <input id="organizerName" placeholder="e.g., Jacob" />
+      </div>
+      <div class="row">
+        <label for="emailSubject">Email subject</label>
+        <input id="emailSubject" placeholder="Your Secret Santa match!" />
+      </div>
+      <div class="row">
+        <label for="messageTemplate">Message template</label>
+        <textarea id="messageTemplate" rows="5" placeholder="Hi {{giver}}, you are Secret Santa for {{receiver}} in {{event}}! — {{organizer}}"></textarea>
+        <small>Template variables: <code>{{giver}}</code>, <code>{{receiver}}</code>, <code>{{event}}</code>, <code>{{organizer}}</code></small>
+      </div>
+      <div class="row inline">
+        <label><input type="checkbox" id="testMode" checked /> Test mode (don’t send)</label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Participants & Rules</h2>
+      <div class="table-actions">
+        <button id="addRowBtn">+ Add row</button>
+        <button id="clearAllBtn" class="secondary">Clear all</button>
+      </div>
+      <table id="participantsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Lock to (optional)</th>
+            <th>Exclude (multi-select)</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <small>Tip: Update names first; lock/exclude dropdowns update dynamically.</small>
+    </section>
+
+    <section class="card">
+      <h2>Draw & Send</h2>
+      <div class="actions">
+        <button id="drawBtn">🎲 Draw & Preview</button>
+        <button id="sendBtn" class="primary" disabled>📤 Send Emails</button>
+      </div>
+      <div id="previewArea" class="preview"></div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <footer>
+      <small>Built for holiday cheer ✨</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
